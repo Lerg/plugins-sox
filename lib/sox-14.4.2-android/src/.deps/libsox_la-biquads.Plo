@@ -1,0 +1,180 @@
+libsox_la-biquads.lo: biquads.c biquad.h sox_i.h soxomp.h soxconfig.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/omp.h \
+ sox.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/android/api-level.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/syslimits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stdarg.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stddef.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/errno.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/errno.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/errno.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/errno.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/errno-base.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdio.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stdint.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdint.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/machine/wchar_limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/int-ll64.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/bitsperlong.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/bitsperlong.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/posix_types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/stddef.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/compiler.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/posix_types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/posix_types.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/sysmacros.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdlib.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/string.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/malloc.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/xlocale.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/alloca.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/strings.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/memory.h \
+ util.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/stat.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/time.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/time.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/stat.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/endian.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/endian.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/machine/endian.h \
+ xmalloc.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/inttypes.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/math.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/byteswap.h \
+ effects.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/assert.h \
+ band.h
+
+biquad.h:
+
+sox_i.h:
+
+soxomp.h:
+
+soxconfig.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/omp.h:
+
+sox.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/android/api-level.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/syslimits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stdarg.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stddef.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/errno.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/errno.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/errno.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/errno.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/errno-base.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdio.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/stdint.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdint.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/machine/wchar_limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/int-ll64.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/bitsperlong.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/bitsperlong.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/posix_types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/stddef.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/compiler.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm/posix_types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/asm-generic/posix_types.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/sysmacros.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/stdlib.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/string.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/malloc.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/xlocale.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/alloca.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/strings.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/memory.h:
+
+util.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/stat.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/time.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/time.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/stat.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/endian.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/endian.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/machine/endian.h:
+
+xmalloc.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/inttypes.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/math.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/byteswap.h:
+
+effects.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/assert.h:
+
+band.h:

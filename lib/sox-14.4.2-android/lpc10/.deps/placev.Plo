@@ -1,0 +1,32 @@
+placev.lo: placev.c f2c.h lpc10.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/android/api-level.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/limits.h \
+ /Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/syslimits.h
+
+f2c.h:
+
+lpc10.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/android/api-level.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/linux/limits.h:
+
+/Volumes/Extra/corona/engine/android-ndk-r10d/platforms/android-21/arch-arm/usr/include/sys/syslimits.h:
