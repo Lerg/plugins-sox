@@ -1,5 +1,4 @@
-dependencies: \
-  /Volumes/Extra/code/bucket/plugins-sox/shared/plugin_sox.cpp \
+dependencies: /Users/lerg/ext/code/plugins-sox/shared/plugin_sox.cpp \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaAssert.h \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaMacros.h \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/Corona/CoronaLibrary.h \
@@ -9,6 +8,6 @@ dependencies: \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/lua/luaconf.h \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/lua/lauxlib.h \
   /Users/lerg/Library/Application\ Support/Corona/Native/Corona/shared/include/lua/lualib.h \
-  /Volumes/Extra/code/bucket/plugins-sox/shared/plugin_sox.h \
-  /Volumes/Extra/code/bucket/plugins-sox/shared/sox.h \
-  /Volumes/Extra/code/bucket/plugins-sox/shared/utils.h
+  /Users/lerg/ext/code/plugins-sox/shared/plugin_sox.h \
+  /Users/lerg/ext/code/plugins-sox/shared/sox.h \
+  /Users/lerg/ext/code/plugins-sox/shared/utils.h

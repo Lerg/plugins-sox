@@ -35,7 +35,7 @@ include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libgomp
-LOCAL_SRC_FILES := /Volumes/Extra/corona/engine/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/libgomp.a
+LOCAL_SRC_FILES := /Users/lerg/ext/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/libgomp.a
 include $(PREBUILT_STATIC_LIBRARY)
 LOCAL_STATIC_LIBRARIES += libgomp
 

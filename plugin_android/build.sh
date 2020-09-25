@@ -10,7 +10,7 @@ TARGET_NAME=sox
 CONFIG=Release
 DEVICE_TYPE=all
 BUILD_TYPE=clean
-ANDROID_NDK="/Volumes/Extra/corona/engine/android-ndk-r10d"
+ANDROID_NDK="/Users/lerg/ext/android-ndk-r10e"
 
 # Canonicalize paths
 pushd $path > /dev/null
@@ -56,8 +56,8 @@ LIBS_SRC_DIR=/Applications/CoronaEnterprise/Corona/android/lib/Corona/libs/armea
 LIBS_DST_DIR=$path
 mkdir -p "$LIBS_DST_DIR"
 
-cp -v "$LIBS_SRC_DIR"/liblua.so "$LIBS_DST_DIR"
-cp -v "$LIBS_SRC_DIR"/libcorona.so "$LIBS_DST_DIR"
+#cp -v "$LIBS_SRC_DIR"/liblua.so "$LIBS_DST_DIR"
+#cp -v "$LIBS_SRC_DIR"/libcorona.so "$LIBS_DST_DIR"
 
 if [ -z "$CFLAGS" ]
 then
