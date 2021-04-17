@@ -135,14 +135,13 @@ widget.newButton{
 widget.newButton{
 	x = xr, y = y + 40,
 	width = w, height = h,
-	label = 'Norm + Cont',
+	label = 'High pitch',
 	onRelease = function()
 		sox.process{
 			input = system.pathForFile('sample.wav', system.ResourceDirectory),
 			output = system.pathForFile('result.wav', system.DocumentsDirectory),
 			effects = {
-				{name = 'gain', params = '-n'},
-				{name = 'contrast', params = '50'}
+				{name = 'pitch', params = '+1200'}
 			}
 		}
 	end}

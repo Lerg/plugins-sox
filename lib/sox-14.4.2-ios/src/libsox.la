@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libsox.3.dylib'
+dlname=''
 
 # Names of this library.
-library_names='libsox.3.dylib libsox.dylib'
+library_names=''
 
 # The name of the static archive.
 old_library='libsox.a'
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/usr/local/lib'
+libdir='/Users/lerg/ext/code/plugins-sox/lib/sox-14.4.2-ios/iOS-iPhoneOS-arm64/lib'

@@ -17,7 +17,7 @@ old_library='libsox.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -lltdl -lpng -lz -lmagic -lopencore-amrnb -lopencore-amrwb -lFLAC -lmp3lame -lvorbisenc -lvorbisfile -lvorbis -logg -L/usr/local/Cellar/libsndfile/1.0.28/lib -lsndfile'
+dependency_libs=' -lltdl -lpng -lz -lmagic -lopencore-amrnb -lopencore-amrwb -lFLAC -lmp3lame -lvorbisenc -lvorbisfile -lvorbis -logg -L/usr/local/Cellar/libsndfile/1.0.30_1/lib -lsndfile'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

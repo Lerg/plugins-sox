@@ -18,26 +18,30 @@ SRC_DIR := $(PLUGIN_DIR)/shared
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblua
-LOCAL_SRC_FILES := ../liblua.so
+LOCAL_SRC_FILES := ../corona-libs/jni/$(TARGET_ARCH_ABI)/liblua.so
 LOCAL_EXPORT_C_INCLUDES := $(LUA_API_DIR)
 include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libcorona
-LOCAL_SRC_FILES := ../libcorona.so
+LOCAL_SRC_FILES := ../corona-libs/jni/$(TARGET_ARCH_ABI)/libcorona.so
 LOCAL_EXPORT_C_INCLUDES := $(LUA_API_CORONA)
 include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE    := libsox
-LOCAL_SRC_FILES := libsox.a
+LOCAL_SRC_FILES := ../../lib/android/$(TARGET_ARCH_ABI)/liblibsox.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libgomp
-LOCAL_SRC_FILES := /Users/lerg/ext/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/arm-linux-androideabi/lib/libgomp.a
+LOCAL_MODULE    := libgsm
+LOCAL_SRC_FILES := ../../lib/android/$(TARGET_ARCH_ABI)/libgsm.a
 include $(PREBUILT_STATIC_LIBRARY)
-LOCAL_STATIC_LIBRARIES += libgomp
+
+include $(CLEAR_VARS)
+LOCAL_MODULE    := liblpc10
+LOCAL_SRC_FILES := ../../lib/android/$(TARGET_ARCH_ABI)/liblpc10.a
+include $(PREBUILT_STATIC_LIBRARY)
 
 # -----------------------------------------------------------------------------
 
@@ -57,14 +61,13 @@ LOCAL_CFLAGS := \
 	-D_REENTRANT \
 	-DRtt_ANDROID_ENV
 
-LOCAL_LDLIBS := -llog -lgomp
+LOCAL_LDLIBS := -llog
 
 LOCAL_SHARED_LIBRARIES := \
 	liblua libcorona
 
 LOCAL_STATIC_LIBRARIES := \
-	libsox \
-	libgomp
+	libsox libgsm liblpc10
 
 LOCAL_CFLAGS += -fopenmp
 LOCAL_LDFLAGS += -fopenmp

@@ -1,12 +1,12 @@
-prefix=/usr/local
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
+prefix=
+exec_prefix=
+libdir=
+includedir=
 
 Name: SoX
 Description: Audio file format and effects library
-Version: 14.4.2
+Version: 
 URL: http://sox.sourceforge.net
 Libs: -L${libdir} -lsox
-Libs.private: -lm 
+Libs.private: 
 Cflags: -I${includedir}

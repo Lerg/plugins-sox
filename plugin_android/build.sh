@@ -10,13 +10,24 @@ TARGET_NAME=sox
 CONFIG=Release
 DEVICE_TYPE=all
 BUILD_TYPE=clean
-ANDROID_NDK="/Users/lerg/ext/android-ndk-r10e"
+ANDROID_NDK="/Users/lerg/ext/android-ndk-r18b"
+
+#
+# Checks exit value for error
+# 
+if [ -z "$ANDROID_NDK" ]
+then
+	echo "ERROR: ANDROID_NDK environment variable must be defined"
+	exit 0
+fi
 
 # Canonicalize paths
 pushd $path > /dev/null
 dir=`pwd`
 path=$dir
 popd > /dev/null
+
+unzip -u /Applications/CoronaEnterprise/Corona/android/lib/gradle/Corona.aar "*.so" -d "$path/corona-libs"
 
 ######################
 # Build .so          #
@@ -52,13 +63,6 @@ then
 fi
 
 # Copy .so files
-LIBS_SRC_DIR=/Applications/CoronaEnterprise/Corona/android/lib/Corona/libs/armeabi-v7a
-LIBS_DST_DIR=$path
-mkdir -p "$LIBS_DST_DIR"
-
-#cp -v "$LIBS_SRC_DIR"/liblua.so "$LIBS_DST_DIR"
-#cp -v "$LIBS_SRC_DIR"/libcorona.so "$LIBS_DST_DIR"
-
 if [ -z "$CFLAGS" ]
 then
 	echo "----------------------------------------------------------------------------"
@@ -74,8 +78,6 @@ else
 	$ANDROID_NDK/ndk-build $FLAGS V=1 MY_CFLAGS="$CFLAGS" APP_OPTIM=$OPTIM_FLAGS
 fi
 
-cp -v ../metadata.lua $path/libs/armeabi-v7a
-
 popd > /dev/null
 
 ######################
@@ -83,4 +85,5 @@ popd > /dev/null
 ######################
 
 echo Done.
-echo $path/libs/armeabi-v7a/libplugin.sox.so
+find "$path/libs" \( -name liblua.so -or -name libcorona.so \)  -delete
+echo "$path/libs"

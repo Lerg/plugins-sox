@@ -1,0 +1,12 @@
+prefix=/Users/lerg/ext/code/plugins-sox/lib/sox-14.4.2-macos/macos-x86_64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SoX
+Description: Audio file format and effects library
+Version: 14.4.2
+URL: http://sox.sourceforge.net
+Libs: -L${libdir} -lsox
+Libs.private: 
+Cflags: -I${includedir}

@@ -314,12 +314,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,
 					"-Wl",
 					"-force_load",
 					libsox.a,
+					"-lsox",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -337,12 +339,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,
 					"-Wl",
 					"-force_load",
 					libsox.a,
+					"-lsox",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

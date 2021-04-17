@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugin/plugin.iml" filepath="$PROJECT_DIR$/plugin/plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Corona_Native_Android.iml" filepath="$PROJECT_DIR$/.idea/modules/Corona_Native_Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Corona_Native_Android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Corona_Native_Android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/Corona_Native_Android.plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/Corona_Native_Android.plugin.iml" />
     </modules>
   </component>
 </project>

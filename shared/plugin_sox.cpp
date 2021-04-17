@@ -8,6 +8,12 @@
 static bool is_initialized = false;
 static char *tmp_path = NULL;
 
+static void lua_print(lua_State *L, const char *message) {
+	lua_getglobal(L, "print");
+	lua_pushstring(L, message);
+	lua_call(L, 1, 0);
+}
+
 static unsigned int verbosity_to_int(const char *verbosity) {
 	if (strcmp(verbosity, "none")) {
 		return 0;
@@ -96,11 +102,13 @@ static int plugin_process(lua_State *L) {
 	if (in == NULL) {
 		luaL_error(L, PLUGIN_NAME ": failed to open the input file.");
 	}
-	sox_format_t *out = sox_open_write(output_filename, &in->signal, NULL, NULL, NULL, NULL);
+	sox_format_t *out = sox_open_write(output_filename, &in->signal, &in->encoding, NULL, NULL, NULL);
 	if (out == NULL) {
 		luaL_error(L, PLUGIN_NAME ": failed to open the output file.");
 	}
 	sox_effects_chain_t *chain = sox_create_effects_chain(&in->encoding, &out->encoding);
+
+	sox_signalinfo_t interm_signal = in->signal; /* NB: deep copy */
 
 	/* The first effect in the effect chain must be something that can source
 	 * samples; in this case, we use the built-in handler that inputs
@@ -110,7 +118,7 @@ static int plugin_process(lua_State *L) {
 	if (sox_effect_options(e, 1, args) != SOX_SUCCESS) {
 		luaL_error(L, PLUGIN_NAME ": failed to create the input effect.");
 	} else {
-		if (sox_add_effect(chain, e, &in->signal, &in->signal) != SOX_SUCCESS) {
+		if (sox_add_effect(chain, e, &interm_signal, &in->signal) != SOX_SUCCESS) {
 			luaL_error(L, PLUGIN_NAME ": failed to add the input effect.");
 		}
 	}
@@ -140,7 +148,7 @@ static int plugin_process(lua_State *L) {
 				if (effect != NULL) {
 					if (sox_effect_options(effect, parameter_count, parameters) != SOX_SUCCESS) {
 						luaL_error(L, PLUGIN_NAME ": failed to set parameters for the %s effect.", effect_name);
-					} else if (sox_add_effect(chain, effect, &in->signal, &in->signal) != SOX_SUCCESS) {
+					} else if (sox_add_effect(chain, effect, &interm_signal, &out->signal) != SOX_SUCCESS) {
 						luaL_error(L, PLUGIN_NAME ": failed to add the %s effect.", effect_name);
 					}
 					free(effect);
@@ -157,12 +165,32 @@ static int plugin_process(lua_State *L) {
 	lua_pop(L, 1); // effects table.
 	lua_pop(L, 1); // params table.
 
+	// Adjust sample rate and channels automatically in case of a mismatch.
+	if (interm_signal.channels != out->signal.channels) {
+		e = sox_create_effect(sox_find_effect("channels"));
+		if (e != NULL) {
+			if (sox_effect_options(e, 0, NULL) != SOX_SUCCESS || sox_add_effect(chain, e, &interm_signal, &out->signal) != SOX_SUCCESS) {
+				luaL_error(L, PLUGIN_NAME ": failed to add the automatic channels effect.");
+			}
+			free(e);
+		}
+	}
+	if (interm_signal.rate != out->signal.rate) {
+		e = sox_create_effect(sox_find_effect("rate"));
+		if (e != NULL) {
+			if (sox_effect_options(e, 0, NULL) != SOX_SUCCESS || sox_add_effect(chain, e, &interm_signal, &out->signal) != SOX_SUCCESS) {
+				luaL_error(L, PLUGIN_NAME ": failed to add the automatic rate effect.");
+			}
+			free(e);
+		}
+	}
+
 	e = sox_create_effect(sox_find_effect("output"));
 	args[0] = (char *)out;
 	if (sox_effect_options(e, 1, args) != SOX_SUCCESS) {
 		luaL_error(L, PLUGIN_NAME ": failed to create the output effect.");
 	} else {
-		if (sox_add_effect(chain, e, &in->signal, &in->signal) != SOX_SUCCESS) {
+		if (sox_add_effect(chain, e, &interm_signal, &out->signal) != SOX_SUCCESS) {
 			luaL_error(L, PLUGIN_NAME ": failed to add the output effect.");
 		}
 	}

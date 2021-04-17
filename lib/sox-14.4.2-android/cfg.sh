@@ -2,9 +2,18 @@
 #export NDK=/Users/lerg/Library/Android/sdk/ndk-bundle
 #$NDK/build/tools/make_standalone_toolchain.py --arch arm --api 28 --install-dir /Volumes/Extra/defold/arm_28_toolchain
 #export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/$HOST_TAG
-HOST=arm-linux-androideabi
-NDK=/Volumes/Extra/corona/engine/android-ndk-r10d
-export TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64
+NDK=/Users/lerg/ext/android-ndk-r18b
+
+ARCH=aarch64
+#ARCH=arm
+
+ARC=arm64
+#ARC=arm
+
+HOST=$ARCH-linux-android
+
+export TOOLCHAIN=$NDK/toolchains/$ARCH-linux-android-4.9/prebuilt/darwin-x86_64
+
 export AR=$TOOLCHAIN/bin/$HOST-ar
 export AS=$TOOLCHAIN/bin/$HOST-as
 export CC=$TOOLCHAIN/bin/$HOST-gcc
@@ -13,7 +22,8 @@ export CXX=$TOOLCHAIN/bin/$HOST-g++
 export LD=$TOOLCHAIN/bin/$HOST-ld
 export RANLIB=$TOOLCHAIN/bin/$HOST-ranlib
 export STRIP=$TOOLCHAIN/bin/$HOST-strip
-export CFLAGS="-fPIC --sysroot=$NDK/platforms/android-21/arch-arm/ -DANDROID -ffunction-sections -funwind-tables -fstack-protector -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fomit-frame-pointer -fstrict-aliasing -funswitch-loops -finline-limit=300"
+export CFLAGS="-fPIC -DANDROID -ffunction-sections -funwind-tables -fstack-protector -fomit-frame-pointer -fstrict-aliasing"
 export CXXFLAGS="$CFLAGS"
-export CPPFLAGS="--sysroot=$NDK/platforms/android-21/arch-arm/ -DANDROID"
+export CPPFLAGS="-DANDROID"
+
 ./configure --host $HOST
